@@ -19,4 +19,4 @@ url="https://www.sfgate.com/bayarea/article/Investigators-Robin-Williams-hanged-
 url="https://stackoverflow.com/questions/53652836/how-to-upgrade-pandas-on-mac"
 
 x = yhmh_nlp(url)
-print("RESULTS: %s" % (x))
+print("NLP RESULTS: %s" % (x))
