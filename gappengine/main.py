@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return 'Hello World!'
+    return 'This is just a test!'
 
 @app.route('/curated', methods=['POST'])
 def curated():
