@@ -16,7 +16,7 @@ def curated():
 	print("curated: request received")
 	data = request.get_json()
 	print(data)
-	return "success returned"
+	return jsonify({'message': 'success returned!'})
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8080, debug=True)
