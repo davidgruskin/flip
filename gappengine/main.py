@@ -1,6 +1,7 @@
 from functools import wraps
 from flask import Flask, request, current_app, jsonify
 import json
+from flask_jsonpify import jsonify
 
 
 # pip install -U flask-cors
@@ -57,7 +58,7 @@ def getData():
     arr["blah"].append("stuff")
     myresponse = jsonify(response=arr)
 
-    return "%s(%s)" % (mycallback, myresponse)
+    return myresponse # "%s(%s)" % (mycallback, myresponse)
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8080, debug=True)
