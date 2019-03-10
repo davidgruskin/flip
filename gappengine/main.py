@@ -19,5 +19,16 @@ def curated():
 	return "%s({'a':1, 'b':2 })" % _GET_PARAMS('callback')
 	#return jsonify({'message': 'success returned!'})
 
+@app.route('/_getData', methods=['GET', 'POST'])
+@cross_origin(send_wildcard=True)
+def getData():
+    #hit the data, package it, put it into json.
+    #ajax would have to hit this every so often to get latest data.
+    arr = {}
+    arr["blah"] = []
+    arr["blah"].append("stuff");
+
+    return jsonify(response=arr)
+
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8080, debug=True)
