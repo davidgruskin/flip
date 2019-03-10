@@ -37,10 +37,10 @@ def curated():
 
 @app.route('/_getData', methods=['GET', 'POST'])
 @cross_origin(send_wildcard=True)
-@support_jsonp
 def getData():
     #hit the data, package it, put it into json.
     #ajax would have to hit this every so often to get latest data.
+    print("LOST DATA")
     arr = {}
     arr["blah"] = []
     arr["blah"].append("stuff");
