@@ -1,5 +1,6 @@
 from functools import wraps
 from flask import Flask, request, current_app, jsonify
+import json
 
 
 # pip install -U flask-cors
@@ -43,7 +44,7 @@ def getData():
     data = request.get_json()
     for x in request.args:
     	if "mydata" in x:
-    		print("RAW DATA: %s" % x.get_json())
+    		print("RAW DATA: %s" % json.loads(x))
     		#print("MY DATA: %s" % ( jsonify(x).get("mydata", "NOTHING") ))
     	print("LOST DATA: %s" % (x))
     arr = {}
