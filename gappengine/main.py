@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify, request
 
 # pip install -U flask-cors
 from flask_cors import cross_origin
@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 @cross_origin(send_wildcard=True)
 def hello():
-	return 'This is just a test!'
+	return jsonify({'message': 'This is just a test!'})
 
 @app.route('/curated', methods=['POST'])
 @cross_origin(send_wildcard=True)
