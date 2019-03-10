@@ -8,13 +8,11 @@ app = Flask(__name__)
 @app.route('/')
 @cross_origin(send_wildcard=True)
 def hello():
-	self.response.headers['Access-Control-Allow-Origin'] = '*'
-    return 'This is just a test!'
+	return 'This is just a test!'
 
 @app.route('/curated', methods=['POST'])
 @cross_origin(send_wildcard=True)
 def curated():
-	self.response.headers['Access-Control-Allow-Origin'] = '*'
 	print("curated: request received")
 	data = request.get_json()
 	print(data)
