@@ -40,7 +40,7 @@ def curated():
 def getData():
     #hit the data, package it, put it into json.
     #ajax would have to hit this every so often to get latest data.
-    print("LOST DATA")
+    print("LOST DATA: " + _GET_PARAMS('callback'))
     arr = {}
     arr["blah"] = []
     arr["blah"].append("stuff");
