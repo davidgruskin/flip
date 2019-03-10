@@ -50,8 +50,9 @@ def getData():
 
     	print("LOST DATA: %s" % (x))
 
-   	mycallback = request.args["callback"]
-    print("callback: %s" % (mycallback))
+	mycallback = request.args["callback"]
+	print("callback: %s" % (mycallback))
+    
     arr = {}
     arr["blah"] = []
     arr["blah"].append("stuff");
