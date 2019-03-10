@@ -47,20 +47,17 @@ def getData():
     		json_obj = json.loads(x).get("mydata", "NOTHING")
     		print("RAW DATA: %s" % json_obj["url"])
     		print("MY DATA: %s" % ( json.loads(x).get("mydata", "NOTHING") ))
-
     	print("LOST DATA: %s" % (x))
 
-	mycallback = request.args["callback"]
-	print("callback: %s" % (mycallback))
-    
+
+    mycallback = request.args["callback"]
+    print("callback: %s" % (mycallback))
     arr = {}
     arr["blah"] = []
-    arr["blah"].append("stuff");
-
+    arr["blah"].append("stuff")
     myresponse = jsonify(response=arr)
-	return "%s(%s)" % (mycallback, myresponse)
 
-    return 
+    return "%s(%s)" % (mycallback, myresponse)
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8080, debug=True)
