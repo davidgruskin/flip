@@ -50,12 +50,16 @@ def getData():
 
     	print("LOST DATA: %s" % (x))
 
-    print("callback: %s" % (request.args["callback"]))
+   	mycallback = request.args["callback"]
+    print("callback: %s" % (mycallback))
     arr = {}
     arr["blah"] = []
     arr["blah"].append("stuff");
 
-    return jsonify(response=arr)
+    myresponse = jsonify(response=arr)
+	return "%s(%s)" % (mycallback, myresponse)
+
+    return 
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8080, debug=True)
