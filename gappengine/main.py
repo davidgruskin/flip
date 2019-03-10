@@ -41,7 +41,7 @@ def getData():
     #hit the data, package it, put it into json.
     #ajax would have to hit this every so often to get latest data.
     data = request.get_json()
-    print("LOST DATA: %s" % (data))
+    print("LOST DATA: %s" % (request))
     arr = {}
     arr["blah"] = []
     arr["blah"].append("stuff");
