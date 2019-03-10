@@ -47,7 +47,10 @@ def getData():
     		json_obj = json.loads(x).get("mydata", "NOTHING")
     		print("RAW DATA: %s" % json_obj["url"])
     		print("MY DATA: %s" % ( json.loads(x).get("mydata", "NOTHING") ))
+
     	print("LOST DATA: %s" % (x))
+
+    print("callback: %s" % (request.args["callback"]))
     arr = {}
     arr["blah"] = []
     arr["blah"].append("stuff");
