@@ -16,7 +16,8 @@ def curated():
 	print("curated: request received")
 	data = request.get_json()
 	print(data)
-	return jsonify({'message': 'success returned!'})
+	return "%s({'a':1, 'b':2 })" % _GET_PARAMS('callback')
+	#return jsonify({'message': 'success returned!'})
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8080, debug=True)
