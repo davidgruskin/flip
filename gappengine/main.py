@@ -43,7 +43,7 @@ def getData():
     data = request.get_json()
     for x in request.args:
     	if "mydata" in x:
-    		print("RAW DATA: %s" % jsonify(x))
+    		print("RAW DATA: %s" % x.get_json())
     		#print("MY DATA: %s" % ( jsonify(x).get("mydata", "NOTHING") ))
     	print("LOST DATA: %s" % (x))
     arr = {}
