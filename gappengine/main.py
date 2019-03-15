@@ -57,7 +57,8 @@ def getData():
     arr = {}
     arr["blah"] = []
     arr["blah"].append("stuff")
-    print("URL: %s" % (url))
+    print(url)
+    print("END")
     return jsonify(response=arr)
 
 if __name__ == '__main__':
