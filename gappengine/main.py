@@ -48,9 +48,9 @@ def getData():
     		json_obj = json.loads(x).get("mydata", "NOTHING")
     		print("RAW DATA: %s" % json_obj["url"])
     		print("MY DATA: %s" % ( json.loads(x).get("mydata", "NOTHING") ))
-            if json_obj is not "NOTHING":
-                url = json_obj["url"]
-                print("URL: %s" % ( url ))
+           # if json_obj is not "NOTHING":
+            url = json_obj["url"]
+            print("URL: %s" % ( url ))
     	print("LOST DATA: %s" % (x))
 
 
