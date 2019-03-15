@@ -58,3 +58,7 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
         var serverResponse = sendDataToParser(tab, tab.url)
     }
 });
+
+
+
+
