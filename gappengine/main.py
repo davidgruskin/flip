@@ -43,7 +43,7 @@ def getData():
     #hit the data, package it, put it into json.
     #ajax would have to hit this every so often to get latest data.
     data = request.get_json()
-    url = ""
+    url = "hi"
     for x in request.args:
     	if "mydata" in x:
     		json_obj = json.loads(x).get("mydata", "NOTHING")
