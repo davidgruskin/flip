@@ -43,11 +43,12 @@ def getData():
     #hit the data, package it, put it into json.
     #ajax would have to hit this every so often to get latest data.
     data = request.get_json()
-    url = "hi"
+    url = ""
     for x in request.args:
     	if "mydata" in x:
     		json_obj = json.loads(x).get("mydata", "NOTHING")
     		print("RAW DATA: %s" % json_obj["url"])
+    		url = json_obj["url"]
     		print("MY DATA: %s" % ( json.loads(x).get("mydata", "NOTHING") ))
     	print("LOST DATA: %s" % (x))
 
@@ -56,7 +57,7 @@ def getData():
     arr = {}
     arr["blah"] = []
     arr["blah"].append("stuff")
-    print("URL: " % (url))
+    print("URL: %s" % (url))
     return jsonify(response=arr)
 
 if __name__ == '__main__':
