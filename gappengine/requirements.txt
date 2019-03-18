@@ -1,3 +1,6 @@
 Flask>=1.0.2
 flask-cors>=3.0.0
 flask_jsonpify>=1.0
+sematch>=1.0.4
+pandas>=0.24.1
+bs4>=0.0.1
