@@ -167,7 +167,7 @@ def yhmh_nlp(url, trigger_words):
 
     print(res_output)
     res=res_output[0:num_keywords]
-    database=pd.read_csv('/Users/vmutai/Projects/HMH/admin/microblog/app/yhmh_curated_articles.csv')
+    database=pd.read_csv(CURATED_LIST) #('/Users/vmutai/Projects/HMH/admin/microblog/app/yhmh_curated_articles.csv')
 
     if celebrity_status ==1:
         database = database[database.celebrity == 1]
